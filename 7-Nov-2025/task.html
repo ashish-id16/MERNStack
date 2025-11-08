@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      margin: 8px 0;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Employee Feedback Form</h2>
+    <form>
+      <label>Name:</label>
+      <input type="text" value="jayanth">
+
+      <label>Email:</label>
+      <input type="email" value="jayanth@faceprep.in">
+
+      <label>Department:</label>
+      <input type="text" value="Training">
+
+      <label>Role/Position:</label>
+      <input type="text" value="Training Manager">
+
+      <label>Overall Experience:</label>
+      <select>
+        <option>Excellent</option>
+        <option>Good</option>
+        <option>Average</option>
+      </select>
+
+      <label>Feedback:</label>
+      <textarea rows="4">He is a certified trainer in aws/ms azure</textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
