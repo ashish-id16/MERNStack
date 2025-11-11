@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.ex1 {
+  width: 700px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+
+div.ex2 {
+  max-width: auto;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Max-width</h2>
+
+<div class="ex1">This div element has width: 500px;</div>
+<br>
+
+<div class="ex2">This div element has max-width: 500px;</div>
+
+<p><strong>Tip:</strong> Drag the browser window to smaller than 500px wide, to see the difference between 
+the two divs!</p>
+
+</body>
+</html>
+
+<br>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.relative {
+  position: fixed;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+</style>
+</head>
+<body>
+
+<h2>Using position: relative;</h2>
+
+<p>An element with position: relative; is positioned relative to its normal position:</p>
+
+<div class="relative">
+This div element has position: relative;
+</div>
+
+</body>
+</html>
+
+<br>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<img src="msd.jpg " alt="MS Dhoni" width="200" height="350">
+<p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+
+</body>
+</html>
+
+<br>
+
+<!--
+visible - Default. The overflow is not clipped. The content renders outside the element's box
+hidden - The overflow is clipped, and the rest of the content is hidden
+scroll - Scrollbars are added. User must scroll to see all content
+auto - Similar to scroll, but adds scrollbars only when necessary
+-->
+
+<br>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  background-color: coral;
+  width: 200px;
+  height: 65px;
+  border: 1px solid;
+  overflow: auto;
+}
+</style>
+</head>
+<body>
+
+<h2>Overflow: visible</h2>
+
+<p>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:</p>
+
+<div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+  float: right;
+  margin-left: 15px;
+  width: 200px;
+  height: 200px;  
+}
+</style>
+</head>
+<body>
+
+<h2>CSS float: right</h2>
+
+<p>In this example, the image will float to the right in the div, and the text will wrap around the image.</p>
+
+<div>
+<img src="msd.jpg" alt="MS Dhoni" width="300" height="300">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: grid;
+  background-color: DodgerBlue;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 24px;
+}
+</style>
+</head>
+<body>
+
+<h1>Create a Flex Container</h1>
+
+<div class="container">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>  
+</div>
+
+<p>Flexbox must have a parent element with the display property set to flex or inline-flex.</p>
+<p>Direct child elements of the flex container automatically becomes flex items.</p>
+
+</body>
+</html>
+
+<!--CSS Flex Container Properties
+The flex container element can have the following properties:
+
+display - Must be set to flex or inline-flex
+flex-direction - Sets the display-direction of flex items
+flex-wrap - Specifies whether the flex items should wrap or not
+flex-flow - Shorthand property for flex-direction and flex-wrap
+justify-content - Aligns the flex items when they do not use all available space on the main-axis (horizontally)
+align-items - Aligns the flex items when they do not use all available space on the cross-axis (vertically)
+align-content - Aligns the flex lines when there is extra space in the cross axis and flex items wrap
+
+CSS flex-direction Property
+The flex-direction property specifies the display-direction of flex items in the flex container.
+
+This property can have one of the following values:
+
+row (default)
+column
+row-reverse
+column-reverse-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: dodgerblue;
+}
+
+.container div{
+  background-color: #f1f1f1;
+  width:100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+  <h1>flex-direction: row</h1>
+
+  <p>flex-direction: row; displays the flex items horizontally (from left to right):</p>
+
+  <div class="container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+</body>
+</html>
+
+<!-- (for justify-content:)
+center
+flex-start (default)
+flex-end
+space-around
+space-between
+space-evenly-->
+
+<!--align-content Property
+center
+stretch (default)
+flex-start
+flex-end
+space-around
+space-between
+space-evenly-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  height: 400px;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: scroll;  
+  background-color: DodgerBlue;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+  <h1>align-content: center</h1>
+
+<p>align-content: center; - The flex lines are packed toward the center of the container:</p>
+
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  height: 200px;  
+  background-color: dodgerblue;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  color:#000;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>align-self: flex-start and align-self: flex-end</h1>
+
+<p>The "align-self: flex-start;" aligns the flex item at the top of the container.</p>
+<p>The "align-self: flex-end;" aligns the flex item at the bottom of the container.</p>
+
+<div class="container">
+  <div>1</div>
+  <div style="align-self: flex-start">2</div>
+  <div style="align-self: flex-end">3</div>
+  <div>4</div>
+</div>
+
+<p>The align-self property overrides the align-items property of the container.</p>
+
+</body>
+</html>
+bod-ubyv-khv

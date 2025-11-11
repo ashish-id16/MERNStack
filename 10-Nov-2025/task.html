@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: lightgreen;
+}
+.main {
+  width: 90%;
+  margin: auto;
+}
+.top {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.top div {
+  background-color: lightcoral;
+  height: 80px;
+  flex: 1;
+}
+.bottom {
+  display: flex;
+  gap: 10px;
+  height: 300px;
+}
+.left {
+  flex: 2;
+  background-color: darkseagreen;
+  position: relative;
+}
+.left div {
+  width: 60px;
+  height: 60px;
+  background-color: yellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.right div {
+  flex: 1;
+  background-color: lightslategray;
+}
+</style>
+</head>
+<body>
+
+<div class="main">
+  <div class="top">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="bottom">
+    <div class="left">
+      <div></div>
+    </div>
+    <div class="right">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
