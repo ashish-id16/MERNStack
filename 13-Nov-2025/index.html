@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <label>Number 1: <input id="num1" type="number" value="10"></label>
+  <label>Number 2: <input id="num2" type="number" value="10"></label>
+  <button onclick="calculate()">Calculate</button>
+
+  <div id="output" class="result">Click "Calculate" to see the result.</div>
+<script>
+    function calculate() {
+      let a = Number(document.getElementById("num1").value);
+      let b = Number(document.getElementById("num2").value);
+
+      let sum = a + b;
+      let diff = a - b;
+      let prod = a * b;
+      let div = a / b;
+
+      document.getElementById("output").innerHTML = 
+      `
+        <b>Results:</b><br>
+        Sum = ${sum}<br>
+        Difference = ${diff}<br>
+        Product = ${prod}<br>
+        Division = ${div}<br><br>
+      `;
+    }
+  </script>
+  </body>
+  </html>
