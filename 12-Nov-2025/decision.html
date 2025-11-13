@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Operations and Decisions</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    input {
+      width: 80px;
+      margin: 5px;
+    }
+    .result {
+      margin-top: 15px;
+      background: #f2f2f2;
+      padding: 10px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Simple Operations and Decisions</h2>
+
+  <label>Number 1: <input id="num1" type="number" value="10"></label>
+  <label>Number 2: <input id="num2" type="number" value="5"></label>
+  <button onclick="calculate()">Calculate</button>
+
+  <div id="output" class="result">Click "Calculate" to see the result.</div>
+
+  <script>
+    function calculate() {
+      let a = Number(document.getElementById("num1").value);
+      let b = Number(document.getElementById("num2").value);
+
+      let sum = a + b;
+      let diff = a - b;
+      let prod = a * b;
+      let div = b !== 0 ? (a / b).toFixed(2) : "∞";
+
+      let sizeMsg = sum >= 50 ? "Sum is large." : "Sum is small.";
+      let parity = (a % 2 === 0 && b % 2 === 0) ? "Both even" : "At least one odd";
+
+      document.getElementById("output").innerHTML = `
+        <b>Results:</b><br>
+        Sum = ${sum}<br>
+        Difference = ${diff}<br>
+        Product = ${prod}<br>
+        Division = ${div}<br><br>
+        ${sizeMsg}<br>
+        ${parity}
+      `;
+    }
+  </script>
+</body>
+</html>

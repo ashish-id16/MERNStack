@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conditional Operators Example</title>
+</head>
+<body>
+    <h2>Operators in Conditional Statements</h2>
+    <p id="result"></p>
+
+    <script>
+        var a = 10;
+        var b = 5;
+        var message = "";
+
+        if (a == 10) {
+            message += "a is equal to 10<br>";
+        }
+
+        if (b != 10) {
+            message += "b is not equal to 10<br>";
+        }
+
+        if (a > b) {
+            message += "a is greater than b<br>";
+        }
+
+        if (b < a) {
+            message += "b is less than a<br>";
+        }
+
+        if (a >= 10) {
+            message += "a is greater than or equal to 10<br>";
+        }
+
+        if (a > b && b < 10) {
+            message += "Both conditions are true (AND)<br>";
+        }
+
+        if (a > 5 || b > 10) {
+            message += "At least one condition is true (OR)<br>";
+        }
+
+        document.getElementById("result").innerHTML = message;
+    </script>
+</body>
+</html>
