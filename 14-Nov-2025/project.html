@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffef75, #c86d74);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            margin-top: 60px;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 25px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        input {
+            width: 80%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        table {
+            margin-top: 30px;
+            border-collapse: collapse;
+            width: 300px;
+            background: white;
+        }
+
+        table th, table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table th {
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Add Employee</h2>
+
+        <label>Name:</label><br>
+        <input type="text" id="name"><br>
+
+        <label>Age:</label><br>
+        <input type="number" id="age"><br>
+
+        <label>Position:</label><br>
+        <input type="text" id="position"><br>
+
+        <button onclick="addEmployee()">Add Employee</button>
+    </div>
+
+    <h3>Employee List</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Position</th>
+            </tr>
+        </thead>
+        <tbody id="employeeTable">
+        </tbody>
+    </table>
+
+    <script>
+        function addEmployee() {
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let position = document.getElementById("position").value;
+
+            if (name === "" || age === "" || position === "") {
+                alert("Please fill all fields");
+                return;
+            }
+
+            let table = document.getElementById("employeeTable");
+
+            let row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${name}</td>
+                <td>${age}</td>
+                <td>${position}</td>
+            `;
+
+            table.appendChild(row);
+
+            // Clear input fields after adding
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("position").value = "";
+        }
+    </script>
+
+</body>
+</html>
