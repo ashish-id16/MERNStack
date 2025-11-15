@@ -8,10 +8,10 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(to right, #ffef75, #c86d74);
-            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh;
         }
 
         .container {
@@ -39,11 +39,6 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 5px;
-        }
-
-        h2 {
-            margin-bottom: 10px;
         }
 
         table {
@@ -69,16 +64,18 @@
     <div class="container">
         <h2>Add Employee</h2>
 
-        <label>Name:</label><br>
-        <input type="text" id="name"><br>
+        <form onsubmit="addEmployee(event)">
+            <label>Name:</label><br>
+            <input type="text" id="name" required><br>
 
-        <label>Age:</label><br>
-        <input type="number" id="age"><br>
+            <label>Age:</label><br>
+            <input type="number" id="age" required><br>
 
-        <label>Position:</label><br>
-        <input type="text" id="position"><br>
+            <label>Position:</label><br>
+            <input type="text" id="position" required><br>
 
-        <button onclick="addEmployee()">Add Employee</button>
+            <button type="submit">Add Employee</button>
+        </form>
     </div>
 
     <h3>Employee List</h3>
@@ -91,23 +88,18 @@
                 <th>Position</th>
             </tr>
         </thead>
-        <tbody id="employeeTable">
-        </tbody>
+        <tbody id="employeeTable"></tbody>
     </table>
 
     <script>
-        function addEmployee() {
+        function addEmployee(event) {
+            event.preventDefault(); 
+
             let name = document.getElementById("name").value;
             let age = document.getElementById("age").value;
             let position = document.getElementById("position").value;
 
-            if (name === "" || age === "" || position === "") {
-                alert("Please fill all fields");
-                return;
-            }
-
             let table = document.getElementById("employeeTable");
-
             let row = document.createElement("tr");
 
             row.innerHTML = `
@@ -118,10 +110,7 @@
 
             table.appendChild(row);
 
-            // Clear input fields after adding
-            document.getElementById("name").value = "";
-            document.getElementById("age").value = "";
-            document.getElementById("position").value = "";
+            event.target.reset(); 
         }
     </script>
 
